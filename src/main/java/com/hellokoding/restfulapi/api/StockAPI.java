@@ -29,7 +29,7 @@ public class StockAPI {
     }
 
     @PostMapping("/api/v1/stocks")
-    public ResponseEntity createANewStock(@Valid @RequestBody Stock stock) {
+    public ResponseEntity<Stock> createANewStock(@Valid @RequestBody Stock stock) {
         return ResponseEntity.ok(stockService.saveStock(stock));
     }
 
